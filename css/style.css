@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+
+    font-family: 'Trebuchet MS';
+}
+
+header {
+
+    width: 100%;
+    height: 255px;
+    text-align: center;
+    color: #16efff;
+    font-family: 'Montserrat', sans-serif !important;
+
+}
+
+header h1 {
+    padding: 10px;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    animation: efects1 12s ease-in-out infinite;
+}
+
+header h1::after {
+    animation-timing-function: ease-in-out;
+}
+
+.efect {
+    width: 80%;
+    float: right;
+    border-top: 4px solid #2aff12;
+    animation: efectline2 4s linear infinite;
+}
+
+nav {
+    animation: efectline 4s linear infinite;
+    border-top: 4px solid #2aff12;
+    background-color: rgba(0, 0, 0, 0.685);
+    border-radius: 0px 50px 0px 0px;
+    width: 60%;
+    padding: 20px 0px;
+    height: 60px;
+    position: sticky;
+    top: 0px;
+    margin: 30px 5px;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+
+    color: #2aff12;
+    width: 100%;
+
+}
+
+nav ul li {
+    width: 150px;
+    height: 45px;
+    border: 1px solid #16efff;
+    box-shadow: 0px 0px 12px 3px #16efff;
+    list-style: none;
+    color: #2aff12;
+    font-family: 'Trebuchet MS';
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+nav ul li ul {
+    display: none;
+    color: #2aff12;
+}
+
+nav ul li:hover ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    left: 270px;
+
+}
+
+nav ul li a:hover,
+nav ul li:hover {
+    background-color: #16efff;
+    color: #ffffff;
+    text-shadow: 1px 1px #313131;
+
+    box-shadow: 0px 0px 50px 2px #16efff;
+}
+
+nav ul li a {
+    color: #2aff12;
+    font-family: 'Trebuchet MS';
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li ul li {
+    margin: 8px;
+}
+
+main {
+    margin: 2px auto;
+    background-image: url(../image/bg02.webp);
+
+}
+
+article {
+    margin: 2px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    min-height: 600px;
+    background-image: url(../image/bg01.gif);
+    background-size: cover;
+
+    background-color: transparent
+}
+
+footer {
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+    bottom: 0px;
+    border-top: 4px solid #2aff12;
+    animation: efectline 4s linear infinite;
+    color: #f1f5f9;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.sound,
+.movies {
+    margin: 2px;
+    padding: 4px;
+    border: 1px solid #16efff;
+    background-color: #000000;
+    box-shadow: -4px -4px 15px 1px #16efff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.sound figure:hover {
+    transition: all;
+    box-shadow: 0px 0px 15px 1px #2dff04;
+    transition-delay: 50ms;
+    transition-duration: 200ms;
+    transform: scale(1.3, .1.3);
+}
+
+audio {
+    max-width: 220px;
+    background-color: #4cff16;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #4cff16;
+
+    box-shadow: 0px 0px 50px 2px #16efff;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+}
+
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-current-time-display {
+    color: #fff;
+}
+
+.sound figure {
+    padding: 2px;
+    margin: 2px;
+    width: 150px;
+    border-radius: 8px;
+}
+
+.sound figure img {
+    max-width: 100%;
+    box-shadow: 0px 0px 5px 2px #16efff;
+}
+
+video {
+    max-width: 420px;
+}
+
+.sound p,
+.movies p {
+    margin: 5px;
+    padding: 5px;
+    font-family: tahoma;
+    font-size: 18px;
+    color: #f1f5f9;
+}
+
+.folder {
+    width: 400px;
+    border-radius: 12px;
+    margin: 4px;
+    padding: 2px;
+    position: relative;
+}
+
+.folder img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px 3px #2aff12;
+    filter: grayscale(100%);
+}
+
+.folder img:hover {
+    filter: grayscale(0%);
+
+}
+
+.folder p {
+    background-color: rgba(30, 255, 0, 0.7);
+    position: absolute;
+    bottom: 50px;
+    left: -20px;
+    width: 110%;
+    height: 80px;
+    box-shadow: 1px 1px 6px 3px #e1ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS';
+    font-size: 46px;
+    color: #2e2c2c;
+
+}
+
+.container {
+    margin: 0px auto;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+
+}
+
+.photoWrapper {
+    width: 100%;
+    position: absolute;
+    animation: round 16s infinite;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.photo {
+    height: 300px;
+    width: 100%;
+}
+
+@keyframes round {
+    25% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+}
+
+.photoWrapper:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.photoWrapper:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.photoWrapper:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.photoWrapper:nth-child(4) {
+    animation-delay: 12s;
+}
+
+@keyframes efects1 {
+
+    25% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 1;
+    }
+}
+
+@keyframes efectline {
+    15% {
+        border-top: 4px solid #4cff16;
+
+    }
+
+    50% {
+        border-top: 4px solid #122aff;
+
+    }
+
+    75% {
+        border-top: 4px solid #41db4e;
+
+    }
+
+    90% {
+        border-top: 4px solid #00dee6;
+
+    }
+}
+
+@keyframes efectline2 {
+    15% {
+        border-top: 4px solid #ff1e16;
+
+    }
+
+    50% {
+        border-top: 4px solid #64003a;
+
+    }
+
+    75% {
+        border-top: 4px solid #db417c;
+
+    }
+
+    90% {
+        border-top: 4px solid #00dee6;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    header {
+        max-height: 155px;
+    }
+
+    .container {
+        max-height: 150px;
+    }
+
+
+.photoWrapper {
+    max-width: 100%;
+}
+
+.photo {
+    height: 150px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    color: #2aff12;
+    width: 100%;
+}
+
+nav ul li:hover ul {
+    top: 62px;
+    left: 50%;
+}
+
+article {
+    flex-direction: column;
+}
+
+.folder {
+    margin-bottom: 40px;
+}
+
+.folder p {
+    background-color: #2aff1281;
+}
+
+.sound {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.sound figure {
+    max-width: 95%;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+audio {
+    margin: 20px;
+    max-width: 99%;
+}
+
+.movies {
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+video {
+    max-width: 100%;
+}
+}
